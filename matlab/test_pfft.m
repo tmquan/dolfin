@@ -9,5 +9,5 @@ imgs = imreadtif('std.tif');
 imgs = single(imgs);
 
 imgs = reshape(imgs, oldshape);
-freq = cfft(imgs, [1, 2], paddings);
-imgs = cifft(freq, [1, 2], paddings]);
+freq = pfft(imgs, [1, 2], paddings);
+imgs = pifft(freq, [1, 2], paddings);

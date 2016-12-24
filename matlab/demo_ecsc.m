@@ -79,9 +79,32 @@ Si   = complex(S0);
 Si   = reshape(Si, dataOuter);
 Sf   = cfft(Si);
 
+%% Initialize the dictionary
+D0   = complex(rand(dictOuter));
+Di 	 = D0;
+
+%% Define operator here
+dimensions = [1, 2];
+paddings   = [64, 64, 0, 0, 0, 0];
+
+pfft  = @(x) cfft(x, dimensions, paddings);  	% Shorthand operation for padding fft
+pifft = @(x) cifft(x, dimensions, paddings);  	% Shorthand operation for padding ifft
 %% Launch the iteration process
 for i=1:Jmax
+	%% Update the current frequency
+	Sf = pfft(Si);
 
+	%% Solving for the sparse codes
+	if fixed_x == false
+
+	end
+
+	%% Solving for the dictionary
+	if fixed_d == false
+		
+	end
+
+	%% Collect the statistics
 end
 
 

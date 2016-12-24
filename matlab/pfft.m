@@ -1,7 +1,7 @@
 %% This script implement the custom fourier transform, 
-function y_padded = cfft(x, dimension, paddings) 
+function y_padded = pfft(x, dimension, paddings) 
 	% Example of calling
-	% y = cfft(x, [1, 2, 3], [64, 64, 0, 0, 0, 0]) 
+	% y = pfft(x, [1, 2, 3], [64, 64, 0, 0, 0, 0]) 
 
 
 	% Pad the signal with paddings
