@@ -1,2 +1,1 @@
-# dolfin
-Deep Oriented Learning Feature of Inadequacy Network
+# Deep Oriented Learning Feature of Inadequacy Network (DOLFIN)
